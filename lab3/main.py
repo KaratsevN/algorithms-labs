@@ -1,6 +1,6 @@
 _author_ = 'Nikita Karatsev'
 _project_ = 'Lab1'
-
+#Contribution activity wasn't displayed on GitHub so I made this commit with this comment.
 import queue1
 # для ввода значений(raw_input, хз почему так не работает)
 from notebook.notebookapp import raw_input

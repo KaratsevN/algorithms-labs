@@ -61,20 +61,21 @@ class Queue1:
     def Del(self, i):
         if (self.first == None):
             return
-        curr = self.first
-        count = 0
+        # curr = self.first
+        # count = 0
+        self.first = self.first.next
         # self.length = 0
-        if i == 0:
-            self.first = self.first.next
-            self.length -= 1
-            return
-        while curr != None:
-            if count == i:
-                if curr.next == None:
-                    self.last = curr
-                old.next = curr.next
-                self.length -= 1
-                break
-            old = curr
-            curr = curr.next
-            count += 1
+        # if i == 0:
+        #     self.first = self.first.next
+        #     self.length -= 1
+        #     return
+        # while curr != None:
+        #     if count == i:
+        #         if curr.next == None:
+        #             self.last = curr
+        #         old.next = curr.next
+        #         self.length -= 1
+        #         break
+        #     old = curr
+        #     curr = curr.next
+        #     count += 1

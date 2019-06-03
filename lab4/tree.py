@@ -1,5 +1,7 @@
 from node import *
 
+_author_ = 'Nikita Karatsev'
+_project_ = 'Lab4'
 
 class BinarySearchTree:
 
@@ -7,7 +9,8 @@ class BinarySearchTree:
         self.root = None
         self.size = 0
         self.lvl = 0
-        self.treeroot = self.root
+        self.peaks = 0
+        #self.treeroot = self.root
 
     def length(self):
         return self.size
@@ -39,12 +42,29 @@ class BinarySearchTree:
         self.treeroot = self.root
 
 
-    def size_size(self, level = 0, root = None):
-        if root is None:
-            self.lvl = 1
-            return self.lvl
+    def sizeTree(self, level = 0):
+        if self.root:
+            if self.root.hasLeftChild() or self.root.hasRightChild():
+                self.lvl += 1
+                self.peaks += 1
+                self._sizeTree(level, self.root)
         else:
-            return self.size_size(level, self.root.left) + 1 + self.size_size(level, self.root.right)
+            self.lvl = 0
+            self.peaks = 1
+            return self.peaks
+
+    def _sizeTree(self, level = 0, currRoot = None):
+        if self.lvl <= level:
+            if currRoot.hasLeftChild():
+                self.lvl += 1
+                self.peaks += 1
+                self._sizeTree(level, currRoot.left)
+                self.lvl -= 1
+            if currRoot.hasRightChild():
+                self.lvl += 1
+                self.peaks += 1
+                self._sizeTree(level, currRoot.right)
+                self.lvl -= 1
         # if self.root.left is None and self.root.right is None:
         #     self.lvl += 1
         # # else:

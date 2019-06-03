@@ -1,16 +1,30 @@
 #from node import *
+_author_ = 'Nikita Karatsev'
+_project_ = 'Lab4'
+
 from tree import *
 
 
 def main():
     mytree = BinarySearchTree()
-    mytree.put(3)
-    mytree.put(4)
+    # mytree.put(3)
+    # mytree.put(4)
+    # mytree.put(5)
+    # mytree.put(7)
+    # mytree.put(2)
+    # mytree.put(1)
+    # mytree.put(6)
     mytree.put(5)
+    mytree.put(3)
     mytree.put(7)
     mytree.put(2)
+    mytree.put(3)
+    mytree.put(6)
+    mytree.put(8)
+    mytree.put(9)
     mytree.copy_route()
-    print(mytree.size_size(0, mytree))
+    print(mytree.sizeTree(2))
+    print(mytree.peaks)
     #mytree.put(2)
 
     #print(mytree[6])

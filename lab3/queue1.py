@@ -1,3 +1,6 @@
+_author_ = 'Nikita Karatsev'
+_project_ = 'Lab3'
+
 import random
 import math
 

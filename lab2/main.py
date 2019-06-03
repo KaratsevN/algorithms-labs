@@ -1,8 +1,8 @@
-import DoubleLinkedList
-from notebook.notebookapp import raw_input
-
 _author_ = 'Nikita Karatsev'
 _project_ = 'Lab2'
+
+import DoubleLinkedList
+from notebook.notebookapp import raw_input
 
 d1 = DoubleLinkedList.DoubleLinkedList()
 d2 = DoubleLinkedList.DoubleLinkedList()

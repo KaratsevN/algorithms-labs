@@ -8,9 +8,9 @@ class BinarySearchTree:
     def __init__(self):
         self.root = None
         self.size = 0
-        self.lvl = 0
+        self.level = 0
         self.peaks = 0
-        #self.treeroot = self.root
+        #self.lvl = 0
 
     def length(self):
         return self.size
@@ -37,34 +37,72 @@ class BinarySearchTree:
             else:
                 currentNode.right = Node(key, parent=currentNode)
 
+    def height(self):
+        return self.root.height() - 1
 
-    def copy_route(self):
-        self.treeroot = self.root
-
-
-    def sizeTree(self, level = 0):
-        if self.root:
-            if self.root.hasLeftChild() or self.root.hasRightChild():
-                self.lvl += 1
-                self.peaks += 1
-                self._sizeTree(level, self.root)
-        else:
-            self.lvl = 0
-            self.peaks = 1
-            return self.peaks
-
-    def _sizeTree(self, level = 0, currRoot = None):
-        if self.lvl <= level:
-            if currRoot.hasLeftChild():
-                self.lvl += 1
-                self.peaks += 1
-                self._sizeTree(level, currRoot.left)
-                self.lvl -= 1
-            if currRoot.hasRightChild():
-                self.lvl += 1
-                self.peaks += 1
-                self._sizeTree(level, currRoot.right)
-                self.lvl -= 1
+    def sizeTree(self, level = 0, currRoot = None):
+        if level > self.level:
+            return -1
+        if currRoot is None:
+            return 0
+        if level == 0:
+            return 1
+        return self.sizeTree(level - 1, currRoot.left) + self.sizeTree(level - 1, currRoot.right)
+        #Мы писали, мы писали... Наши рученьки устали. Мы немного отдохнем и не будем удалять этот огрызок.
+        # Так, на память как же тяжело было рекурсивно облапать дерево))
+        '''
+        Опасаясь контрразведки, 
+        Избегая жизни светской,
+        Под английским псевдонимом "мистер Джон Ланкастер Пек",
+        Вечно в кожаных перчатках — 
+        Чтоб не делать отпечатков, —
+        Жил в гостинице "Совейской" несовейский человек.
+        
+        Джон Ланкастер в одиночку, 
+        Преимущественно ночью,
+        Щёлкал носом — в нём был спрятан инфракрасный объектив;
+        А потом в нормальном свете 
+        Представало в чёрном цвете
+        То, что ценим мы и любим, чем гордится коллектив:
+        
+        Например, клуб на улице Нагорной 
+        Стал общественной уборной,
+        Наш родной Центральный рынок стал похож на грязный склад,
+        Искаженный микроплёнкой, 
+        ГУМ стал маленькой избёнкой,
+        И уж вспомнить неприлично, чем предстал театр МХАТ.
+        
+        Но работать без подручных — 
+        Может, грустно, а может — скучно.
+        Враг подумал — враг был дока, — написал фиктивный чек,
+        И где-то в дебрях ресторана 
+        Гражданина Епифана
+        Сбил с пути и с панталыку несовейский человек.
+        
+        Епифан казался жадным, 
+        Хитрым, умным, плотоядным,
+        Меры в женщинах и в пиве он не знал и не хотел.
+        В общем так: подручный Джона 
+        Был находкой для шпиона —
+        Так случиться может с каждым, если пьян и мягкотел!
+        '''
+        # if self.lvl <= level:
+        #     if currRoot.hasLeftChild():
+        #         if self.lvl == level:
+        #             self.peaks += 1
+        #         self.lvl += 1
+        #         self._sizeTree(level, currRoot.left)
+        #         self.lvl -= 1
+        #     else:
+        #         if currRoot.hasRightChild():
+        #             if self.lvl == level:
+        #                 self.peaks += 1
+        #             self.lvl += 1
+        #             self._sizeTree(level, currRoot.right)
+        #             self.lvl -= 1
+        #         else:
+        #             if self.lvl == level:
+        #                 self.peaks += 1
         # if self.root.left is None and self.root.right is None:
         #     self.lvl += 1
         # # else:

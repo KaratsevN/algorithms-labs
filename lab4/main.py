@@ -3,42 +3,46 @@ _author_ = 'Nikita Karatsev'
 _project_ = 'Lab4'
 
 from tree import *
+# для ввода значений(raw_input, хз почему так не работает)
+from notebook.notebookapp import raw_input
 
 
 def main():
     mytree = BinarySearchTree()
-    # mytree.put(3)
-    # mytree.put(4)
-    # mytree.put(5)
-    # mytree.put(7)
-    # mytree.put(2)
-    # mytree.put(1)
-    # mytree.put(6)
-    mytree.put(5)
-    mytree.put(3)
-    mytree.put(7)
-    mytree.put(2)
-    mytree.put(3)
-    mytree.put(6)
-    mytree.put(8)
-    mytree.put(9)
-    mytree.copy_route()
-    print(mytree.sizeTree(2))
-    print(mytree.peaks)
-    #mytree.put(2)
+    i = 0
+    c = '_'
+    while (c != '~'):
+        print(
+            "Добро пожаловать. -1 - заполнить автоматом, 0 - добавить, "\
+            "1 - число вершин на n-ом уровне,  2 - высота дерева, ~ - выход.")
+        c = raw_input("Введите: ")
+        if c == '-1':
+            mytree.put(5)
+            mytree.put(3)
+            mytree.put(7)
+            mytree.put(2)
+            mytree.put(4)
+            mytree.put(6)
+            mytree.put(8)
+            mytree.put(9)
+            mytree.put(10)
+        if (c == '0'):
+            i = int(raw_input("Введите значение: "))
+            mytree.put(i)
+        elif (c == '1'):
+            mytree.level = mytree.height()
+            i = int(raw_input("Введите уровень: "))
+            mytree.peaks = mytree.sizeTree(i, mytree.root)
+            if mytree.peaks == -1:
+                print("Некорректное значение(высота дерева меньше)")
+            else:
+                print("Число вершин: ", mytree.peaks)
+        elif (c == '2'):
+            mytree.level = mytree.height()
+            print(mytree.level)
+        elif (c == '~'):
+            print("You say goodbye and I say hello!")
 
-    #print(mytree[6])
-    #print(mytree[2])
-
-    #t.root = Node(4)
-    #t.root.rchild = Node(5)
-    #print (t.root.data) #this works
-    #print (t.root.rchild.data) #this works too
-    # t = Tree()
-    # t.add(t.root,4)
-    # t.add(t.root,5)
-    #print (t.root.data) #this fails
-    #print (t.root.rchild.data) #this fails too
 
 if __name__ == '__main__':
      main()

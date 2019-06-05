@@ -1,5 +1,6 @@
 _author_ = 'Nikita Karatsev'
 _project_ = 'Lab5'
+#this comment is made for Github statistic(sorry, but I doing other things today). I'll be more productive.
 # Contribution activity wasn't displayed on GitHub so I made this commit with this comment.
 # для ввода значений(raw_input, хз почему так не работает)
 #from notebook.notebookapp import raw_input

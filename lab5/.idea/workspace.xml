@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/main.py" line="47" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3c1acad6-081d-4186-9cd7-193770578437" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="3c1acad6-081d-4186-9cd7-193770578437" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,12 +149,12 @@
       <workItem from="1559615280628" duration="1224000" />
       <workItem from="1559617600828" duration="1819000" />
       <workItem from="1559866118202" duration="182000" />
-      <workItem from="1559866345969" duration="4417000" />
+      <workItem from="1559866345969" duration="4581000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19387000" />
+    <option name="totallyTimeSpent" value="19551000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-1" width="1442" height="886" extended-state="6" />
@@ -167,7 +165,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32962137" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.325887" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.325887" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997773" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />

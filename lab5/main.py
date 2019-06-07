@@ -68,7 +68,8 @@ def printStudents():
         print("  Всего:            ", data[i]['estimates']['total'])
         print("======================================")
 
-
+#https://www.youtube.com/watch?v=nxEbBOK1SEw
+#хахахахахахахахахахахаХАХАахах
 def sortStudents():
     helper = data[0]
     for i in range(0, len(data) - 1):
